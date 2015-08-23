@@ -1,0 +1,50 @@
+---
+- hosts: apache
+  sudo: yes
+
+  vars:
+    http_port: 80
+    domain: example.com
+
+  tasks:
+
+    - name: install packages
+      apt: name={{ item }} update_cache=yes state=latest
+      with_items:
+        - apache2
+        - git
+
+    - name: enable apache2
+      service: name=apache2 state=started
+
+    - name: enabled mod_rewrite
+      apache2_module: name=rewrite state=present
+      notify:
+        - restart apache2
+
+    - name: apache2 listen on port {{ http_port }}
+      lineinfile: dest=/etc/apache2/ports.conf regexp="^Listen " line="Listen {{ http_port }}" state=present
+      notify:
+        - restart apache2
+
+    - name: apache2 virtualhost on port {{ http_port }}
+      lineinfile: dest=/etc/apache2/sites-available/000-default.conf regexp="^<VirtualHost \*:" line="<VirtualHost *:{{ http_port }}>"
+      notify:
+        - restart apache2
+
+    - name: create virtual host file
+      template: src=virtualhost.conf dest=/etc/apache2/sites-available/{{ domain }}.conf
+
+    - name: a2ensite {{ domain }}
+      command: a2ensite {{ domain }}
+      args:
+        creates: /etc/apache2/sites-enabled/{{ domain }}.conf
+      notify:
+        - restart apache2
+
+    - name: clone basic html template
+      git: repo=https://github.com/beacloudgenius/ansible-apache-site.git dest=/var/www/{{ domain }} update=no
+
+  handlers:
+    - name: restart apache2
+      service: name=apache2 state=restarted
