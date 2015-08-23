@@ -50,17 +50,23 @@ Clone the repository
 
 Check content in folder you just cloned. You will see ansible-first-run folder created. Let us see what is inside this folder using `tree` command.
 
-    tree ansible-first-run
+    user in ~
+    $ tree ansible-first-run
+
+You will see an output similar to this.
 
     ansible-first-run
     ├── ansible.cfg
     ├── apache.yml
+    ├── before-ansible-first-run.gif
+    ├── gif from video.sh
     ├── hosts
     ├── index.html
     ├── README.md
+    ├── restore-snapshot.gif
     └── virtualhost.conf
 
-    0 directories, 6 files
+    0 directories, 9 files
 
 #### Step 3.
 
