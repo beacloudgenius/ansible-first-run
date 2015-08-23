@@ -418,7 +418,9 @@ As you probably noted, this added segment uses an `index.html` file that is alre
 
 Now run
 
-    ansible-playbook apache.yml --ask-sudo-pass
+    (foobar)
+    user in ~/ansible-first-run on master √
+    ± ansible-playbook apache.yml --ask-sudo-pass                                                                                       SUDO password:
 
 Check <http://localhost> and that should show a customized index page in the browser.
 
