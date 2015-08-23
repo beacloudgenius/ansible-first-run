@@ -192,7 +192,7 @@ Confirm apache died
 
     user in ~/ansible-first-run on master √
     ± ps -ef | grep apache
-    
+
 You will see output similar to this.
 
     user      5971  2339  0 20:14 pts/1    00:00:00 grep --color=auto --exclude-dir=.bzr --exclude-dir=.cvs --exclude-dir=.git --exclude-dir=.hg --exclude-dir=.svn apache
@@ -367,6 +367,7 @@ You are currently working inside the folder `ansible-first-run` in that folder, 
     ± tree .
 
 You will see
+
     .
     ├── ansible.cfg
     ├── apache.yml
