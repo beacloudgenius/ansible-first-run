@@ -19,7 +19,7 @@ Once you have this safety net, you get the ability to make mistakes without losi
 Go ahead and take a snapshot first. Let's us name that snapshot something like - *before ansible first run.*
 
 
-<img src="https://cdn.cloudgeni.us/wp-content/uploads/before-ansible-first-run.gif" alt="before-ansible-first-run" width="1600" height="900" class="aligncenter size-full wp-image-1557" />
+<img src="https://be.a.cloudgeni.us/wp-content/uploads/before-ansible-first-run.gif" alt="before-ansible-first-run" width="1600" height="900" class="aligncenter size-full wp-image-1557" />
 
 Now you can proceed with the exercise...and remember, its totally ok to make mistakes. You know you can come back to this point any time by restoring the snapshot you took.
 
@@ -27,7 +27,7 @@ Now you can proceed with the exercise...and remember, its totally ok to make mis
 
 If you have never restored back to a known good snapshot ever before, now is a good time to practice restoring to the snapshot `before-ansible-first-run` you just took.
 
-<img src="https://cdn.cloudgeni.us/restore-snapshot.gif" alt="restore snapshot" width="1600" height="900" class="aligncenter size-full" />
+<img src="https://be.a.cloudgeni.us/restore-snapshot.gif" alt="restore snapshot" width="1600" height="900" class="aligncenter size-full" />
 
 
 #### Step 1.

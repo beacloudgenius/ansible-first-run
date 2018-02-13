@@ -1,6 +1,6 @@
 ---
 - hosts: apache
-  sudo: yes
+  become: yes
 
   vars:
     http_port: 80
