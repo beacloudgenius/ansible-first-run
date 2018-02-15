@@ -1,2 +1,5 @@
 [apache]
+
 localhost     ansible_connection=local
+
+test          ansible_ssh_host=144.202.82.101     ansible_ssh_user=root     ansible_ssh_private_key_file=~/.ssh/newnilesh     ansible_python_interpreter=/usr/bin/python3
