@@ -4,7 +4,7 @@
 
   vars:
     http_port: 80
-    domain: example.com
+    domain: example.cloudgeni.us
 
   tasks:
 
