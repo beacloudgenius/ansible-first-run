@@ -5,4 +5,4 @@
 
 ## Run like this
 
-    ansible-playbook apache.yml     --ask-become    --step
+    ansible-playbook apache.yml  --step
