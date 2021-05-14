@@ -1,6 +1,6 @@
 [apache]
 
+example.cloudgeni.us    ansible_connection=local
 
-#localhost     ansible_connection=local
-
-example.cloudgeni.us    ansible_ssh_user=root
+# some-machine-in-some-cloud      ansible_ssh_user=root
+# localhost                       ansible_connection=local
