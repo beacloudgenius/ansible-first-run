@@ -43,7 +43,7 @@
         - restart apache2
 
     - name: clone basic html template
-      git: repo=https://github.com/beacloudgenius/ansible-apache-site.git dest=/var/www/{{ domain }} update=no
+      git: repo=https://github.com/beacloudgenius/ansible-apache-site.git dest=/var/www/{{ domain }} update=yes
 
   handlers:
     - name: restart apache2
